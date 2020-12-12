@@ -16,7 +16,7 @@
     - rpm -ivh /home/ec2-user/jdk-8u171-linux-x64.rpm --force
     - rpm -ivh /home/ec2-user/hadoop-1.2.1-1.x86_64.rpm --force
 
-- name: copying the core-site.xml
+- name: copying the files
   template:
     src: ../templates/{{node_name}}/{{item}}
     dest: /etc/hadoop/{{item}}
